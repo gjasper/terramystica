@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view>
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node>
+   <type name="Build"/>
+   <type name="BuildFirst"/>
+   <type name="Game"/>
+   <type name="Int"/>
+   <type name="Noop"/>
+   <type name="String"/>
+   <type name="Transform"/>
+   <type name="univ"/>
+   <type name="board/Corner"/>
+   <type name="board/GameTile"/>
+   <type name="board/NECorner"/>
+   <type name="board/NonCorner"/>
+   <type name="board/NWCorner"/>
+   <type name="board/Player1"/>
+   <type name="board/Player2"/>
+   <type name="board/Player3"/>
+   <type name="board/Player4"/>
+   <type name="board/SECorner"/>
+   <type name="board/SWCorner"/>
+   <type name="board/TierI"/>
+   <type name="board/TierII"/>
+   <type name="board/TierIII"/>
+   <type name="board/TierIV"/>
+   <type name="board/Tile"/>
+   <type name="board/TypeA"/>
+   <type name="board/TypeB"/>
+   <type name="board/TypeC"/>
+   <type name="board/TypeD"/>
+   <type name="ordering/Ord"/>
+   <type name="seq/Int"/>
+</node>
+
+<node showlabel="no">
+   <set name="$someTilesForEachTerrain_t" type="board/GameTile"/>
+   <set name="$someTilesForEachTerrain_t&apos;" type="board/GameTile"/>
+   <set name="$someTilesForEachTerrain_t&apos;&apos;&apos;" type="board/GameTile"/>
+</node>
+
+<node visible="no">
+   <type name="ActionType"/>
+   <type name="board/BuildingTier"/>
+   <type name="board/Player"/>
+   <type name="board/TerrainType"/>
+   <type name="board/Wall"/>
+</node>
+
+<node visible="yes" showlabel="no">
+   <set name="$someTilesForEachTerrain_t&apos;&apos;" type="board/GameTile"/>
+</node>
+
+<edge visible="no" attribute="yes">
+   <relation name="building"> <type name="board/Tile"/> <type name="board/BuildingTier"/> </relation>
+   <relation name="currentAction"> <type name="Game"/> <type name="ActionType"/> </relation>
+   <relation name="currentPlayer"> <type name="Game"/> <type name="board/Player"/> </relation>
+   <relation name="terrainType"> <type name="board/Tile"/> <type name="board/TerrainType"/> </relation>
+</edge>
+
+</view>
+
+</alloy>
