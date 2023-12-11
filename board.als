@@ -22,6 +22,29 @@ one sig Player4 extends Player {} {
     desiredTerrain = TypeD
 }
 
+abstract sig Round {
+	next: one Round
+}
+
+one sig Start extends Round {} { next = Round1}
+one sig Round1 extends Round {} { next = Round2}
+one sig Round2 extends Round {} { next = Round3}
+one sig Round3 extends Round {} { next = Round4}
+one sig Round4 extends Round {} { next = Round5}
+one sig Round5 extends Round {} { next = Round6}
+one sig Round6 extends Round {} { next = Round7}
+one sig Round7 extends Round {} { next = Round8}
+one sig Round8 extends Round {} { next = Round9}
+one sig Round9 extends Round {} { next = Round10}
+one sig Round10 extends Round {} { next = Round11}
+one sig Round11 extends Round {} { next = Round12}
+one sig Round12 extends Round {} { next = Round13}
+one sig Round13 extends Round {} { next = Round14}
+one sig Round14 extends Round {} { next = Round15}
+one sig Round15 extends Round {} { next = Round16}
+one sig Round16 extends Round {} { next = Finish}
+one sig Finish extends Round {} { next = Finish}
+
 abstract sig TerrainType {}
 one sig TypeA extends TerrainType {}
 one sig TypeB extends TerrainType {}
